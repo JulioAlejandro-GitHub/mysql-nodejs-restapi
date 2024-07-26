@@ -1,6 +1,7 @@
 import { pool } from "./dbConnection.js";
 
 export const getUsers = async () => {
+  console.log('getUsers SQL    SELECT * FROM usuario ORDER BY usuario_id')
   const [rows] = await pool.query("SELECT * FROM usuario ORDER BY usuario_id");
   return rows;
 };
